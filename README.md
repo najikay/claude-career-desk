@@ -69,7 +69,7 @@ From the Claude directory: search for Career Desk. In Claude Code:
 
 ## Tests and evals
 
-- `python -m unittest discover -s tests` checks that every skill's frontmatter is valid and that the sentences carrying each promise are present, word for word: the no-invention rule, the care with personal details, no percentage scores, no value for share options. Removing a rule fails the build. CI runs it on Linux and Windows.
+- The tests live on the [`ci` branch](https://github.com/najikay/claude-career-desk/tree/ci), so that this branch, the published plugin, holds instructions and no code. They check that every skill's frontmatter is valid and that the sentences carrying each promise are present, word for word: the no-invention rule, the care with personal details, no percentage scores, no value for share options. Removing a rule fails the build. CI runs them against every push here, on Linux and Windows.
 - `evals/` holds one case per skill, all built on one fictional applicant, Sam Rivera, whose CV lists C++ with nothing to show for it and whose robot project used ROS 1, applying to a job that needs C++ and ROS 2. Each case is graded three ways: **facts** fails if anything is invented (C++ experience, ROS 2, a made-up number or date, a fact about the employer, a value for unexplained share options) and counts double; **wording** fails if a line claims more than you gave (a stronger verb, a guess stated as fact); **shape** checks that the parts the skill promises are there. `claude plugin eval .` runs each case with the plugin and without it.
 
 Last run (Claude Code 2.1.288, three runs per case and arm, judged by Claude Sonnet, 2026-10-05). Each cell is the number of runs out of three that passed:
