@@ -41,7 +41,7 @@ class Rules(unittest.TestCase):
         for name, sentences in {
             "job-fit": ["Never give a percentage match", "Never merge `met` and `partly` into one number", "not a prediction"],
             "cv-tailor": ["it does not become \"ROS 2\"", "only where the CV or the user gives one", "**Not on your CV**"],
-            "cover-letter": ["Facts about the employer come only from the posting or from the user", "only if the user has said so", "Do not state the user's start date"],
+            "cover-letter": ["Facts about the employer come only from the posting or from the user", "only if the user has said so", "Do not state the user's start date", "put no placeholder in the body"],
             "interview-prep": ["Every part of a story (situation, task, action, result) comes from the CV or the user", "never make one up", "Do not supply salary figures from memory"],
             "cv-review": ["ask where they used it", "do not dress it up as something else"],
             "application-tracker": ["Never fill a name, an email address or a date from a guess", "you cannot keep the table between conversations"],

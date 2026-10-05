@@ -13,19 +13,21 @@ Input: the posting, the user's CV, and the user's own reason for wanting this jo
 ## Shape
 - **Opening**: the role by name, and the user's reason for applying.
 - **Middle**: two or three matches. Each takes something the posting asks for and answers it with a specific piece of the CV: what the user did and with what. Add what came of it only where the CV or the user gives it.
-- **A gap, if it matters**: one honest line on the nearest thing they have. What they are doing to close it goes in only if the user has said so; otherwise leave it out or write `[add: what you are doing to learn X, if anything]`. Optional; never an apology.
+- **A gap, if it matters**: one honest line on the nearest thing they have. What they are doing to close it goes in only if the user has said so; otherwise leave that part out and ask about it after the letter. Optional; never an apology.
 - **Close**: a plain sign-off that they would welcome a conversation.
 - **Length**: 180 to 280 words. The language follows the posting.
 
+The letter is built from what there is. Apart from the reason, put no placeholder in the body: a requirement the CV cannot answer is simply not claimed in the letter, and goes in the list after it as a question for the user. A letter full of brackets is not a draft the user can use.
+
 ## Rules
 - Facts about the employer come only from the posting or from the user. Do not add what you remember or assume about the company.
-- Do not state the user's start date, notice period, willingness to relocate or right to work unless they said it; use `[add: …]`.
+- Do not state the user's start date, notice period, willingness to relocate or right to work unless they said it. Leave it out and ask after the letter.
 - Address the letter to a person only if the posting or the user names one; otherwise "Dear Hiring Team". No postal addresses or dates you were not given.
 - No stock phrases in the letter: not "I am writing to express my interest", "I am passionate about", "I believe I would be a great fit", "team player", "fast learner", "dynamic", "thrilled". Say the specific thing instead.
 - Write the way a clear, capable person writes: short sentences, first person, no flattery.
 
 ## After the letter
-List which CV line backs each claim in the letter, every placeholder left in it, and any requirement of the posting the letter deliberately does not mention. End with one line: before sending anything, search it for `[`; every bracket is something only the user can fill in.
+List which CV line backs each claim in the letter; the requirements of the posting the letter does not claim, each as a question to the user ("Where have you used C++? I can add a line"); and anything else worth adding if it is true (where they live, when they can start). End with one line: before sending anything, search it for `[`; every bracket is something only the user can fill in.
 
 Give the letter in the reply as one block the user can copy.
 

@@ -19,7 +19,7 @@ Input: one job posting and the user's CV. Ask for whichever is missing. The user
    - `unknown` when the user may well have it and simply did not write it: ask.
 3. **Read it as an entry-level application**: "years of experience" on a junior posting is often a wish, not a wall. Say how projects, internships and other work count toward it, without pretending they are the same thing. A real wall (a required licence, an on-site location the user cannot reach, right to work where the posting demands it) is named as a wall.
 4. **Verdict**: `apply`, `stretch` (worth applying if the named gaps are handled) or `skip`, with the reason in two sentences. Count each verdict separately: "1 met, 3 partly, 1 not met of 5 must-haves". Never merge `met` and `partly` into one number. Never give a percentage match: it would be invented precision.
-5. **For each gap that matters**, one of: show existing evidence better (cv-tailor does that), close it with something small and real (say what, and how long it would honestly take), or prepare to address it in the letter or the interview.
+5. **For each gap that matters**, one of: show existing evidence better (cv-tailor does that), start closing it with something small and real (say what the first step is and roughly how long that step takes), or prepare to address it in the letter or the interview. A first step is a first piece of evidence, not the requirement met: never say a gap such as a language or a framework "can be closed in a few weeks".
 6. **Questions**: at most three, about the `unknown` and thin rows.
 
 ## Rules
