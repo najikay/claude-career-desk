@@ -27,6 +27,7 @@ class Rules(unittest.TestCase):
                 "no added skill, tool, title, employer, date, grade or number",
                 "Do not upgrade what the user did or how much of it was theirs",
                 "If a rewrite says more than the original, it is wrong.",
+                "no lesson learned, feeling, motive or personal quality they did not state",
                 "`[add: …]`",
             ):
                 self.assertIn(sentence, text, f"{name}: missing {sentence!r}")

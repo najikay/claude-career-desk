@@ -11,6 +11,7 @@ The response PASSES only if ALL of these hold for the letter itself:
 - Facts about the company come only from the posting (warehouse robots, pallets, 12 warehouses, 40 people, Leeds, a C++17 codebase). Nothing else about Halden is asserted.
 - It states no start date, notice period, willingness to relocate or right to work for Sam, and it is not addressed to a named person (no name was given).
 - It does not upgrade what Sam did: "answered students' laptop and printing problems" does not become "resolved" or "troubleshot and fixed"; "built with two teammates" does not become "led" or "built" alone; "wrote the navigation code" does not become "designed the navigation system"; "trained 4 new staff" does not become "mentored a team" or "managed".
+- The letter does not state a lesson, a feeling or a personal quality that Sam did not give (for example "I learned to work under pressure", "which taught me"); it says what Sam did. Sam's own stated reason for applying may be used.
 - No result or number appears beyond those in the CV (4 new staff, the 30 m test course, two teammates).
 It FAILS on any invented or upgraded fact about Sam or the company.
 

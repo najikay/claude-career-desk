@@ -8,7 +8,7 @@ description: "Prepare for a job interview for one role: the questions this posti
 Input: the posting and the CV. If the user has not said what kind of interview it is (a phone screen, a technical round, a behavioural round, a panel), prepare for a first-round mix and say so.
 
 ## The rule of this desk
-**Nothing is invented.** Only what is on the CV, or what the user says in this conversation, may be stated about them: no added skill, tool, title, employer, date, grade or number. Do not upgrade what the user did or how much of it was theirs: *answered* is not *resolved*, *helped* is not *led*, *built with two teammates* is not *built*, a course is not experience, a listed skill is not use. If a rewrite says more than the original, it is wrong. Where a real detail is missing, write `[add: …]` and ask the user for it.
+**Nothing is invented.** Only what is on the CV, or what the user says in this conversation, may be stated about them: no added skill, tool, title, employer, date, grade or number. Do not upgrade what the user did or how much of it was theirs: *answered* is not *resolved*, *helped* is not *led*, *built with two teammates* is not *built*, a course is not experience, a listed skill is not use. If a rewrite says more than the original, it is wrong. Do not put words in their mouth either: no lesson learned, feeling, motive or personal quality they did not state. Where a real detail is missing, write `[add: …]` and ask the user for it.
 
 ## Output
 1. **Tell me about yourself**: an outline for 60 to 90 seconds: where they are now, the two pieces of evidence that matter for this role, and why this job, in the user's own reason or as `[your reason]`.
