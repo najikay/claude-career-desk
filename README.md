@@ -6,9 +6,13 @@
 
 **A job search you can stand behind.** Seven skills that take you from a CV and a job posting to a strong, honest application, and keep the search organised. Built for entry-level roles: final-year students, new graduates, career changers, anyone whose CV is short on paid experience in the field.
 
-## The rule
+## The promise
 
-**Career Desk is built never to invent experience.** It reorders, cuts and rewords what is on your CV, and it asks questions to draw out what you left off. It is told not to add a skill, a tool, a title, an employer, a date, a grade or a number you did not give, and not to upgrade what you did: *answered* does not become *resolved*, *built with two teammates* does not become *led*. Where a line needs a detail that is not there, it writes `[add: …]` and asks you. Every change is listed so you can check it. It is still an AI model following instructions: read every line before you send it.
+**Career Desk works only from your facts.** It reorders, cuts and rewords what is on your CV, and asks questions to draw out what you left off. It is built not to add a skill, a tool, a title, an employer, a date, a grade or a number you did not give. Where a line needs a detail that is not there, it writes `[add: …]` and asks you. Every change it makes is listed, so you can check it.
+
+It is also told to keep your wording honest: *answered* does not become *resolved*, *built with two teammates* does not become *led*, and nothing about what you learned or what kind of person you are is said for you. This is the harder half, and the measurements below show it is very good at it but not perfect. **Read the verbs before you send anything.**
+
+Measured, not claimed (details under Tests and evals): across 21 graded runs with a strict judge, Career Desk invented a fact in none, and kept the wording honest in 18. Claude without the plugin, on the same tasks, invented a fact in 15 of 21.
 
 This is advice, not a guarantee of an interview or an offer, and not legal, tax or immigration advice.
 
@@ -64,9 +68,27 @@ From the Claude directory: search for Career Desk. In Claude Code:
 ## Tests and evals
 
 - `python -m unittest discover -s tests` checks that every skill's frontmatter is valid and that the sentences carrying each promise are present, word for word: the no-invention rule, the care with personal details, no percentage scores, no value for share options. Removing a rule fails the build. CI runs it on Linux and Windows.
-- `evals/` holds one case per skill, all built on one fictional applicant, Sam Rivera, whose CV lists C++ with nothing to show for it and whose robot project used ROS 1, applying to a job that needs C++ and ROS 2. Each case has two graders: **honesty**, which fails if anything is invented or inflated (C++ experience, ROS 2, a made-up number, an upgraded verb, a value for unexplained share options) and counts double, and **shape**, which checks that the parts the skill promises are there. `claude plugin eval .` runs each case with the plugin and without it.
+- `evals/` holds one case per skill, all built on one fictional applicant, Sam Rivera, whose CV lists C++ with nothing to show for it and whose robot project used ROS 1, applying to a job that needs C++ and ROS 2. Each case is graded three ways: **facts** fails if anything is invented (C++ experience, ROS 2, a made-up number or date, a fact about the employer, a value for unexplained share options) and counts double; **wording** fails if a line claims more than you gave (a stronger verb, a guess stated as fact); **shape** checks that the parts the skill promises are there. `claude plugin eval .` runs each case with the plugin and without it.
 
-EVALS_TABLE
+Last run (Claude Code 2.1.288, three runs per case and arm, judged by Claude Sonnet, 2026-10-05). Each cell is the number of runs out of three that passed:
+
+| Skill | No invented facts | Honest wording | All parts present |
+|---|---|---|---|
+| cv-review | 3 | 3 | 3 |
+| job-fit | 3 | 2 | 3 |
+| cv-tailor | 3 | 3 | 3 |
+| cover-letter | 3 | 3 | 3 |
+| interview-prep | 3 | 2 | 3 |
+| application-tracker | 3 | 2 | 3 |
+| offer-compare | 3 | 3 | 3 |
+| **With Career Desk** | **21 of 21** | **18 of 21** | **21 of 21** |
+| Claude without the plugin | 6 of 21 | 2 of 21 | 0 of 21 |
+
+How to read it:
+- The judge is strict and sees only the answer, so each grader carries the user's whole message to check against. A stronger judge matters: the default small judge passed answers that this one caught.
+- The three wording misses were small and are the reason for "read the verbs": for example a rough time estimate stated a little too firmly. None added a skill, a tool, a number or an employer.
+- "Without the plugin" is plain Claude given the same message. It usually wrote a good-looking answer that claimed more than the CV says.
+- One fictional applicant and one posting are a narrow test. Real CVs will find cases these do not.
 
 ## Author
 
