@@ -1,0 +1,25 @@
+{
+  "name": "career-desk",
+  "version": "0.1.0",
+  "description": "A job search you can stand behind, built for entry-level applicants: review your CV like a recruiter, check your fit for a posting, tailor your CV and write a cover letter without inventing anything, prepare for the interview from your own experience, track your applications and compare offers.",
+  "author": {
+    "name": "Naji Kayal",
+    "url": "https://github.com/najikay"
+  },
+  "homepage": "https://github.com/najikay/claude-career-desk",
+  "repository": "https://github.com/najikay/claude-career-desk",
+  "keywords": [
+    "jobs",
+    "career",
+    "resume",
+    "cv",
+    "cover-letter",
+    "interview",
+    "job-search",
+    "entry-level",
+    "graduates"
+  ],
+  "license": "Apache-2.0",
+  "displayName": "Career Desk",
+  "icon": ".claude-plugin/icon.png"
+}

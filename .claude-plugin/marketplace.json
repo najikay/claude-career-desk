@@ -1,0 +1,33 @@
+{
+  "name": "claude-career-desk",
+  "owner": {
+    "name": "Naji Kayal",
+    "url": "https://github.com/najikay"
+  },
+  "metadata": {
+    "description": "Career Desk: seven job-search skills for Claude, built for entry-level applicants (CV review, job fit, CV tailoring, cover letter, interview prep, application tracker, offer comparison)."
+  },
+  "plugins": [
+    {
+      "name": "career-desk",
+      "source": "./",
+      "description": "A job search you can stand behind, built for entry-level applicants: review your CV like a recruiter, check your fit for a posting, tailor your CV and write a cover letter without inventing anything, prepare for the interview from your own experience, track your applications and compare offers.",
+      "version": "0.1.0",
+      "author": {
+        "name": "Naji Kayal"
+      },
+      "keywords": [
+        "jobs",
+        "career",
+        "resume",
+        "cv",
+        "cover-letter",
+        "interview",
+        "job-search",
+        "entry-level",
+        "graduates"
+      ],
+      "license": "Apache-2.0"
+    }
+  ]
+}
