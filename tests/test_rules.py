@@ -57,15 +57,16 @@ class Rules(unittest.TestCase):
             for word in ("scrape", "crawl", "mcp", "api key"):
                 self.assertNotIn(word, text, f"{f}: {word}")
 
-    def test_every_skill_has_an_eval_with_an_honesty_grader_that_weighs_double(self):
+    def test_every_skill_has_an_eval_with_three_graders_and_facts_weigh_double(self):
         for f in SKILLS:
             case = ROOT / "evals" / f.parent.name
             self.assertTrue((case / "prompt.md").is_file(), f.parent.name)
-            honesty = (case / "graders" / "honesty.md").read_text(encoding="utf-8")
-            shape = (case / "graders" / "shape.md").read_text(encoding="utf-8")
-            self.assertIn("weight: 2", honesty, f.parent.name)
-            self.assertIn("weight: 1", shape, f.parent.name)
-            self.assertIn("FAILS", honesty, f.parent.name)
+            graders = {p.name: p.read_text(encoding="utf-8") for p in (case / "graders").glob("*.md")}
+            self.assertEqual(set(graders), {"facts.md", "wording.md", "shape.md"}, f.parent.name)
+            self.assertIn("weight: 2", graders["facts.md"], f.parent.name)
+            for name in ("facts.md", "wording.md"):  # the judge sees only the answer: the grader carries the facts
+                self.assertIn("<user_message>", graders[name], f"{f.parent.name}/{name}")
+                self.assertIn("FAIL if", graders[name], f"{f.parent.name}/{name}")
 
     def test_the_manifests_the_changelog_and_the_readme_agree(self):
         plugin = json.loads((ROOT / ".claude-plugin" / "plugin.json").read_text(encoding="utf-8"))
