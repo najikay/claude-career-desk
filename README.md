@@ -48,6 +48,8 @@ Wherever Claude plugins with skills run: the Claude apps, Claude Code and Cowork
 
 ## Your data
 
+The full statement is in [Privacy](PRIVACY.md). In short:
+
 - Career Desk is a set of instructions for Claude. It adds no code and sends nothing itself.
 - What you paste is handled like anything else in your Claude conversation, under the same terms.
 - The skills tell Claude never to put your CV text, name or contact details into a web search. If you ask it to look an employer up, it searches with the company and role names only.
