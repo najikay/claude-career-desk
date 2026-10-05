@@ -18,7 +18,7 @@ When you use a skill, Claude reads what you put into the conversation: your CV, 
 
 ## What it will not ask for
 
-Your age or date of birth, a photo, your marital or family status, your health, your religion or your nationality. It does not suggest adding them to a CV.
+Your age or date of birth, a photo, your marital or family status, your health, your religion, your nationality or ethnicity, your gender or sexual orientation, military or national service, immigration status, or a criminal record. It does not suggest adding them to a CV.
 
 ## What you can do
 

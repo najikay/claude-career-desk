@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1 — 2026-10-06
+From the first trial on a real CV (five skills, with a made-up posting). No fact was invented. Four smaller things were, and are now ruled out:
+- A CV review listed military or national service among things "missing" from the CV. The skills no longer raise it, nor ethnicity, gender, sexual orientation, immigration status or a criminal record, even as an option.
+- The reviewer was called "he" from the name on the CV. The skills write to "you" and do not guess gender.
+- A cover letter said the applicant used a tool "daily", told the employer what its product "needs", and said what the applicant "would be learning on the job". No word of degree or frequency the CV does not give; the employer's needs are quoted from the posting; the applicant's intentions are theirs to add.
+- Also in this version: a privacy statement (`PRIVACY.md`).
+
 ## 0.1.0 — 2026-10-05
 First release. Seven skills for an entry-level job search, each complete in a plain chat with no tools:
 cv-review, job-fit, cv-tailor, cover-letter, interview-prep, application-tracker, offer-compare.

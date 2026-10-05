@@ -53,7 +53,7 @@ The full statement is in [Privacy](PRIVACY.md). In short:
 - Career Desk is a set of instructions for Claude. It adds no code and sends nothing itself.
 - What you paste is handled like anything else in your Claude conversation, under the same terms.
 - The skills tell Claude never to put your CV text, name or contact details into a web search. If you ask it to look an employer up, it searches with the company and role names only.
-- It never asks for your age, a photo, your family status, health, religion or nationality, and it does not suggest adding them.
+- It never asks for your age, a photo, your family status, health, religion, nationality, ethnicity, gender, military or national service, immigration status or a criminal record, and it does not suggest adding them.
 - It does not scrape job sites. You paste the posting.
 - In a plain chat the application tracker cannot remember between conversations: it gives you the table to keep and paste back, and it says so. In Claude Code or Cowork it saves `applications.md` only when you ask for a file.
 - You may want to remove your phone number and home address before pasting a CV; nothing here needs them.

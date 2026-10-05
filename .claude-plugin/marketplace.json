@@ -12,7 +12,7 @@
       "name": "career-desk",
       "source": "./",
       "description": "A job search you can stand behind, built for entry-level applicants: review your CV like a recruiter, check your fit for a posting, tailor your CV and write a cover letter without inventing anything, prepare for the interview from your own experience, track your applications and compare offers.",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "author": {
         "name": "Naji Kayal"
       },
