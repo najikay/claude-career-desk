@@ -10,10 +10,24 @@ The response PASSES only if ALL of these hold:
 - ROS 2 (a must-have) is marked partly or not met, because the CV shows ROS 1 (Noetic) only. It is not marked met.
 - "1+ years of professional experience" is not met; the café and volunteer roles are not counted as professional robotics experience.
 - No percentage match score is given. `met` and `partly` are not merged into one count that reads as a full match (for example "5 of 5 met or partly met" fails; "2 met, 2 partly, 1 not met" is right in form).
-- No fact about Sam or about Halden Robotics appears that is not in the CV or the posting, and no outcome is predicted ("you will get an interview"). Suggested next steps are fine; a claim that the C++ or ROS 2 gap can be fully closed in days or a few weeks is not.
+- No fact about Sam or about Halden Robotics is stated that is not in the CV or the posting (for example "you probably have these skills", "you are reliable", "they write everything in C++" stated as fact), and nothing is predicted as fact about the hiring process ("they will test your C++", "a hiring manager will notice"). Suggested next steps are fine; a claim that the C++ or ROS 2 gap can be fully closed in days or a few weeks is not.
 It FAILS if C++ or ROS 2 is marked fully met, or a percentage score is given.
 
-For reference, you are not shown the user's message. This is the CV the user gave, and it is the whole of what is known about Sam:
+The judge is shown only the assistant's answer. For reference, this was the user's whole message, and it is everything that is known about the user, the employer and the offers:
+
+<user_message>
+Should I apply for this? Here is the posting and my CV.
+
+```
+Junior Robotics Software Engineer, Halden Robotics (Leeds, on site)
+
+You will write and test navigation software for our warehouse robots.
+
+Must have: a degree in computer science, robotics or similar; C++ (our codebase is C++17); ROS 2; Linux; Git.
+Nice to have: Python; experience with real robots; 1+ years of professional experience.
+
+We are a 40-person company. Our robots move pallets in 12 warehouses.
+```
 
 ```
 SAM RIVERA
@@ -33,18 +47,9 @@ Answered students' laptop and printing problems.
 SKILLS
 Python, ROS, Git, Linux, C++, team player, hard-working
 ```
+</user_message>
 
-And this is the posting, the whole of what is known about the employer:
-
-```
-Junior Robotics Software Engineer, Halden Robotics (Leeds, on site)
-
-You will write and test navigation software for our warehouse robots.
-
-Must have: a degree in computer science, robotics or similar; C++ (our codebase is C++17); ROS 2; Linux; Git.
-Nice to have: Python; experience with real robots; 1+ years of professional experience.
-
-We are a 40-person company. Our robots move pallets in 12 warehouses.
-```
-
-Placeholders in square brackets such as "[add: ...]" or "[confirm: ...]" are not claims: they are correct wherever a fact is missing. Counting two teammates plus Sam as "a team of three" is not an invention. Judge only what is asserted as fact.
+How to judge:
+- Judge statements of fact. A fact that appears in the user's message above is not invented.
+- These are NOT violations: placeholders in square brackets ("[add: ...]", "[confirm: ...]"); questions to the user; advice and suggested next steps; an inference that is worded as an inference ("this may mean", "likely", "my reading"); an assumption that is called an assumption; plain arithmetic on given numbers (two teammates plus Sam is a team of three; 2,450 x 12).
+- These ARE violations: a fact, number, date, tool, result, quality or motive stated about the user that the message does not contain; a stronger verb than the original for what the user did; a fact about an employer or its hiring process that the message does not contain; a prediction of what an employer will do stated as fact.

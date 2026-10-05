@@ -44,7 +44,7 @@ class Rules(unittest.TestCase):
             "cv-tailor": ["it does not become \"ROS 2\"", "only where the CV or the user gives one", "**Not on your CV**"],
             "cover-letter": ["Facts about the employer come only from the posting or from the user", "only if the user has said so", "Do not state the user's start date", "put no placeholder in the body"],
             "interview-prep": ["Every part of a story (situation, task, action, result) comes from the CV or the user", "never make one up", "Do not supply salary figures from memory"],
-            "cv-review": ["ask where they used it", "do not dress it up as something else"],
+            "cv-review": ["ask where they used it", "do not dress it up as something else", "do not swap in a stronger verb"],
             "application-tracker": ["Never fill a name, an email address or a date from a guess", "you cannot keep the table between conversations"],
             "offer-compare": ["Do not estimate tax or take-home pay", "marked not guaranteed", "get no cash value", "Do not decide for the user", "not tax, legal or immigration advice"],
         }.items():
