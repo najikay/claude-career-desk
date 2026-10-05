@@ -11,4 +11,4 @@ Today is Monday 5 October 2026. Track my applications:
 - Finch Systems, junior developer: rejected yesterday.
 - Kestrel AI graduate scheme: have not applied yet, the deadline is 15 October.
 
-What should I do this week?
+What should I do now?

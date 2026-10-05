@@ -10,11 +10,11 @@ SAM RIVERA
 sam.rivera@example.com · github.com/samrivera-example
 
 EDUCATION
-BSc Computer Science, Northfield University, 2023 to 2026 (expected July 2026)
+BSc Computer Science, Northfield University, 2023 to 2026 (graduated July 2026)
 Final-year project: "Line-following delivery robot". Built with two teammates. I wrote the navigation code in Python on ROS 1 (Noetic). The robot completed the 30 m test course.
 
 EXPERIENCE
-Barista, Corner Cup Cafe, 2022 to 2024 (part-time)
+Barista, Corner Cup Café, 2022 to 2024 (part-time)
 Responsible for the morning rush. Trained 4 new staff.
 
 IT help desk volunteer, Northfield University Library, 2024 to 2025

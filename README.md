@@ -8,7 +8,9 @@
 
 ## The rule
 
-**Career Desk never invents experience.** It reorders, cuts and rewords what is on your CV, and it asks questions to draw out what you left off. It does not add a skill, a tool, a title, a date or a number you did not give. Where a line needs a detail that is not there, it writes `[add: …]` and asks you. Everything it changes is listed, so you stay the author, and nothing in your application is something you would have to bluff about in the interview.
+**Career Desk is built never to invent experience.** It reorders, cuts and rewords what is on your CV, and it asks questions to draw out what you left off. It is told not to add a skill, a tool, a title, an employer, a date, a grade or a number you did not give, and not to upgrade what you did: *answered* does not become *resolved*, *built with two teammates* does not become *led*. Where a line needs a detail that is not there, it writes `[add: …]` and asks you. Every change is listed so you can check it. It is still an AI model following instructions: read every line before you send it.
+
+This is advice, not a guarantee of an interview or an offer, and not legal, tax or immigration advice.
 
 ## The skills
 
@@ -34,18 +36,21 @@ Each skill also works on its own.
 
 ## What it is like at entry level
 
-A short CV is not an empty one. The evidence is in a final-year project, a thesis, an internship, a part-time job, a volunteer role, and it is usually undersold: buried under Education, written as duties, missing what you yourself did. Career Desk looks for that evidence and says it plainly. A café job is evidence of pace and of dealing with people; it is described as that, not dressed up as something else. "1+ years of experience" on a junior posting is read as what it usually is, a wish, while a real wall such as the right to work or an on-site location is named as a wall.
+A short CV is not an empty one. The evidence is in a final-year project, a thesis, an internship, a part-time job, a volunteer role, and it is usually undersold: buried under Education, written as duties, missing what you yourself did. Career Desk looks for that evidence and says it plainly. A café job is evidence of pace and of dealing with people; it is described as that, not dressed up as something else. "1+ years of experience" on a junior posting is read as what it often is, a wish, while a real wall such as the right to work or an on-site location is named as a wall.
 
 ## Where it runs
 
-Everywhere Claude runs: the Claude apps (web, desktop, mobile), Claude Code and Cowork. It is skills only. There is no server, nothing to install and nothing to configure.
+Wherever Claude plugins with skills run: the Claude apps, Claude Code and Cowork. It is skills only: no server and nothing to configure after installing.
 
 ## Your data
 
-- Career Desk is a set of instructions for Claude. It contains no code that runs, stores or sends anything.
-- Your CV and the postings you paste stay in your conversation with Claude, under the same terms as anything else you write there.
+- Career Desk is a set of instructions for Claude. It adds no code and sends nothing itself.
+- What you paste is handled like anything else in your Claude conversation, under the same terms.
+- The skills tell Claude never to put your CV text, name or contact details into a web search. If you ask it to look an employer up, it searches with the company and role names only.
+- It never asks for your age, a photo, your family status, health, religion or nationality, and it does not suggest adding them.
 - It does not scrape job sites. You paste the posting.
-- In a plain chat the application tracker cannot remember between conversations: it gives you the table to keep and paste back. It says so.
+- In a plain chat the application tracker cannot remember between conversations: it gives you the table to keep and paste back, and it says so. In Claude Code or Cowork it saves `applications.md` only when you ask for a file.
+- You may want to remove your phone number and home address before pasting a CV; nothing here needs them.
 
 ## Install
 
@@ -58,14 +63,14 @@ From the Claude directory: search for Career Desk. In Claude Code:
 
 ## Tests and evals
 
-- `python -m unittest discover -s tests` checks that every skill's frontmatter is valid, that each skill that writes about you forbids inventing, that nothing scrapes, and that every skill has an eval. CI runs it on Linux and Windows.
-- `evals/` holds one case per skill, all built on one fictional applicant, Sam Rivera, whose CV lists C++ with nothing to show for it and whose robot project used ROS 1, applying to a job that needs C++ and ROS 2. Each case passes only if nothing is invented: no C++ experience, no ROS 2, no made-up numbers, no value put on unexplained share options. `claude plugin eval .` runs each case with the plugin and without it.
+- `python -m unittest discover -s tests` checks that every skill's frontmatter is valid and that the sentences carrying each promise are present, word for word: the no-invention rule, the care with personal details, no percentage scores, no value for share options. Removing a rule fails the build. CI runs it on Linux and Windows.
+- `evals/` holds one case per skill, all built on one fictional applicant, Sam Rivera, whose CV lists C++ with nothing to show for it and whose robot project used ROS 1, applying to a job that needs C++ and ROS 2. Each case has two graders: **honesty**, which fails if anything is invented or inflated (C++ experience, ROS 2, a made-up number, an upgraded verb, a value for unexplained share options) and counts double, and **shape**, which checks that the parts the skill promises are there. `claude plugin eval .` runs each case with the plugin and without it.
 
 EVALS_TABLE
 
 ## Author
 
-Naji Kayal, University of Haifa. Issues and suggestions are welcome here.
+Naji Kayal. Issues and suggestions are welcome here.
 
 ## License
 
