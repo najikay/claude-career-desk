@@ -62,9 +62,12 @@ class Rules(unittest.TestCase):
             case = ROOT / "evals" / f.parent.name
             self.assertTrue((case / "prompt.md").is_file(), f.parent.name)
             graders = {p.name: p.read_text(encoding="utf-8") for p in (case / "graders").glob("*.md")}
-            self.assertEqual(set(graders), {"facts.md", "wording.md", "shape.md"}, f.parent.name)
-            self.assertIn("weight: 2", graders["facts.md"], f.parent.name)
-            for name in ("facts.md", "wording.md"):  # the judge sees only the answer: the grader carries the facts
+            facts = sorted(n for n in graders if n.startswith("facts"))  # one grader, or one per clause
+            self.assertTrue(facts, f.parent.name)
+            self.assertEqual(set(graders) - set(facts), {"wording.md", "shape.md"}, f.parent.name)
+            weight = sum(int(graders[n].split("weight: ", 1)[1].split()[0]) for n in facts)
+            self.assertGreaterEqual(weight, 2, f"{f.parent.name}: invented facts must outweigh wording")
+            for name in (*facts, "wording.md"):  # the judge sees only the answer: the grader carries the facts
                 self.assertIn("<user_message>", graders[name], f"{f.parent.name}/{name}")
                 self.assertIn("FAIL if", graders[name], f"{f.parent.name}/{name}")
 

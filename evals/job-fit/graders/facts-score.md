@@ -3,10 +3,10 @@ type: llm
 weight: 1
 ---
 
-This grader checks one thing: wording that claims more than the user gave, or a guess stated as fact. Ignore format and completeness.
+This grader checks one thing: invented facts. Ignore style, format and completeness.
 
-FAIL if the answer states as fact something that is only a guess: that Sam "probably has" a skill the CV does not show; a personal quality of Sam's ("you are reliable"); what Halden's interviewers or hiring manager will do or notice; that the C++ or ROS 2 requirement itself can be met in days or a few weeks.
-A guess that is worded as a guess ("this may", "likely", "my reading") is fine. A rough time estimate for a named first step ("the beginner tutorials take roughly a few evenings", "a weekend or two") is fine. Otherwise PASS.
+FAIL if the answer gives a percentage match score, or merges met and partly into one count that reads as a full match (for example "5 of 5 met or partly met").
+Otherwise PASS. ("1 met, 4 partly, 0 not met of 5" is the right form.)
 
 Not violations, here or anywhere: placeholders in square brackets ("[add: ...]", "[confirm: ...]"); questions to the user; advice and suggested next steps; plain arithmetic on given numbers (two teammates plus Sam is a team of three; 2,450 x 12); mentioning ROS 2, C++ or any missing thing as a gap, a requirement or something to learn.
 

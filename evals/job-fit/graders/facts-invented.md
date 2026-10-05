@@ -1,11 +1,11 @@
 ---
 type: llm
-weight: 2
+weight: 1
 ---
 
 This grader checks one thing: invented facts. Ignore style, format and completeness.
 
-FAIL if the answer does any of these: marks C++ as simply "met" (it is only in the skills list); marks ROS 2 as "met" (the CV shows ROS 1 only); counts the café or the help desk as professional software or robotics experience; gives a percentage match score; merges met and partly into one count that reads as a full match ("5 of 5 met or partly met"); states a tool, project, number or qualification for Sam that is not in the CV; states a fact about Halden Robotics that is not in the posting.
+FAIL if the answer states, as a fact about Sam, a tool, project, number or qualification that is not in the CV, or states a fact about Halden Robotics that is not in the posting.
 Otherwise PASS.
 
 Not violations, here or anywhere: placeholders in square brackets ("[add: ...]", "[confirm: ...]"); questions to the user; advice and suggested next steps; plain arithmetic on given numbers (two teammates plus Sam is a team of three; 2,450 x 12); mentioning ROS 2, C++ or any missing thing as a gap, a requirement or something to learn.
